@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+#def decimal_to_binary():
 x = input("Input a decimal number: ").strip()
 x = int(x)
 if x == 0:
