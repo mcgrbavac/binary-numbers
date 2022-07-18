@@ -6,7 +6,6 @@ if answer_1 == "y":
 	with open(answer_2) as reader:
 		wordList = reader.readlines()
 	numberOfWords = len(wordList) - 1
-#	numberOfWords = int(numberOfWords) - 1
 	from conversionFunctions import *
 	answer_3 = input("Would like to input a binary number (y/n)? ").strip().lower()
 	if answer_3 == "y":

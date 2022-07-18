@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-answer = input("Do you want to convert a decimal number to a binary number? (y/n) ").strip().lower()
+answer = input("do you want to convert a decimal number to a binary number? (y/n) ").strip().lower()
 if answer == "y":
 	answer_2 = input("Input a decimal number: ").strip()
 	from conversionFunctions import decimal_to_binary
@@ -14,6 +14,6 @@ elif answer == "n":
 		y = binary_to_decimal(answer_2)
 		print(y)
 	else:
-		print("Goodbye.")
+		print("Goodbye")
 else:
-	print("Goodbye.")
+	print("Goodbye")
