@@ -3,7 +3,7 @@
 def decimal_to_binary(x):
 	x = int(x)
 	if x == 0:
-		print("0")
+		return("0")
 	elif x < 0:
 		print("You must input a positive decimal number.")
 	else:
