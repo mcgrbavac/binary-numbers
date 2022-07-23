@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import math
-from conversionFunctions import *
 
 def max_binary(x):
 	y = math.log(2)
@@ -25,6 +24,7 @@ with open("list.txt") as reader:
 	wordList = reader.readlines()
 numberOfWords = len(wordList)
 #Confirm max word number is a max binary number
+from conversionFunctions import *
 wordCountCheck = max_binary(numberOfWords)
 if wordCountCheck == 0:
 	#get word count in binary and the length of binary
@@ -50,21 +50,12 @@ else:
 	print("Your binary input is missing {} bits.".format(inputBinaryCheck))
 	exit()
 
+
 #Checksum the input binary
-answer = input("Do you want to checksum the input binary? (y/n) ").strip().lower()
-if answer == "y":
-	checksum_Boolean = checksum_255(inputBinary)
-else:
-	checksum_Boolean = True
-if checksum_Boolean == False:
-	print("Error with the checksum.")
-	exit()
-elif answer == "n":
-	print("Did not check checksum.")
-	print(" ")
-else:
-	print("Good checksum.")
-	print(" ")
+
+
+
+
 
 #Make an array of binary numbers
 n = numberOfWordsBinaryLength
