@@ -42,7 +42,6 @@ inputBinary = input("Input your binary derived with entropy: ").strip()
 inputDecimal = binary_to_decimal(inputBinary)
 inputBinaryCheck = input_binary_length_check(inputBinary, numberOfWordsBinary)
 if inputBinaryCheck == 0:
-	#
 	#get number of words in our word list
 	numOfWordsExtract = len(inputBinary) // len(numberOfWordsBinary)
 	#continue
@@ -53,18 +52,23 @@ else:
 #Checksum the input binary
 answer = input("Do you want to checksum the input binary? (y/n) ").strip().lower()
 if answer == "y":
-	checksum_Boolean = checksum_255(inputBinary)
+	checksum_Output = checksum_255(inputBinary)
+	checksum_Boolean = checksum_Output[0]
 else:
 	checksum_Boolean = True
 if checksum_Boolean == False:
-	print("Error with the checksum.")
-	exit()
+	if checksum_Output[3] == "":
+		print("Input binary is too short for an 8 bit checksum.")
+		exit()
+	else:
+		print("Error with the checksum.")
+		#This next print message uses a min of 8 characters in 2 of the variable input. This 8 is specific to the checksum_255 output since this checksum will output 8 bits.
+		print("The following binary {0:0>b} has a checksum of {2:0>8b} which is different from the input of {1:0>8b}.".format(int(checksum_Output[1],2), int(checksum_Output[2],2), int(checksum_Output[3],2)))
+		exit()
 elif answer == "n":
-	print("Did not check checksum.")
-	print(" ")
+	print("Did not check checksum. \n")
 else:
-	print("Good checksum.")
-	print(" ")
+	print("Good checksum. \n")
 
 #Make an array of binary numbers
 n = numberOfWordsBinaryLength
