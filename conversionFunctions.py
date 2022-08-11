@@ -60,7 +60,7 @@ def hexadecimal_to_decimal(x):
 	return(x_decimal)
 
 def hexadecimal_to_binary(x):
-	# z = "{0:0>1X}".format(int(x, 16))
+	# z = "{0:0>1b}".format(int(x, 16))
 	y = hexadecimal_to_decimal(x)
 	z = decimal_to_binary(y)
 	return(z)
