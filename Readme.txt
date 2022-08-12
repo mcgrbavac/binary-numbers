@@ -5,6 +5,8 @@ This is an assortment of python code to brush up on old learnings and my underst
 
 'startConversion.py' is the script that can be run to perform number conversions.
 
+'startConversion2.py' an updated script for number conversions.
+
 'list.txt' is a file that contains words.
 
 'getWord.py' is a script to pull a single word from a list.
