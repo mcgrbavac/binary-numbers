@@ -1,5 +1,5 @@
 
-This is an assortment of python code to brush up on old learnings and my understanding of BIP 39.
+This is an assortment of python code to brush up on old learnings.
 
 'conversionFunctions.py' contains several functions that can convert decimal to binary to hexidecimal and vice versa. It also contains a function for SHA256 hash algorithum.
 
